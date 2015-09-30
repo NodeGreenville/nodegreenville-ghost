@@ -1,0 +1,25 @@
+{
+  "name": "nodegreenville-ghost",
+  "version": "1.0.0",
+  "description": "A website for NodeGreenville",
+  "main": "server.js",
+  "dependencies": {
+    "ghost": "^0.7.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeGreenville/nodegreenville-ghost.git"
+  },
+  "author": "Node Greenville",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NodeGreenville/nodegreenville-ghost/issues"
+  },
+  "homepage": "https://github.com/NodeGreenville/nodegreenville-ghost#readme"
+}
