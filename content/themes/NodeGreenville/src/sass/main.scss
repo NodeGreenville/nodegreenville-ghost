@@ -1,0 +1,111 @@
+@import "../../../../../node_modules/normalize-scss/normalize";
+
+$brand-green: #7ebe43;
+$brand-green-dark: darken($brand-green, 20%);
+$brand-green-darker: darken($brand-green, 40%);
+$brand-grey: #f5f7f2;
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  background-color: $brand-grey;
+}
+
+a {
+  color: $brand-green;
+  text-decoration: none;
+  transition: color .2s linear;
+
+  &:hover {
+    color: $brand-green-dark;
+  }
+}
+
+.site-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.nav {
+  overflow: auto;
+  background-color: $brand-green;
+  height: 45px;
+
+  a {
+    color: white;
+    line-height: 45px;
+    padding: .5em 1em;
+  }
+
+  ul {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      color: $brand-green-dark;
+    }
+  }
+}
+
+.blog-logo {
+  font-size: 1.25em;
+}
+
+.main-header-content {
+  padding: 4em 3em;
+  background-color: white;
+}
+
+.page-description {
+  margin: 0;
+
+  span {
+  color: $brand-green-dark;
+  }
+}
+
+.content {
+  background-color: white;
+  padding: 2em;
+}
+
+.meetup-area {
+  font-size: 2em;
+  text-align: center;
+  padding: 2em 0;
+}
+
+.site-footer {
+  background-color: $brand-grey;
+  overflow: auto;
+  color: darken($brand-grey, 20%);
+  font-size: .875em;
+  padding: 2em 1em;
+
+  & .links, & .copyright {
+    max-width: 50%;
+    float: left;
+  }
+
+  .links {
+    float: right;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      display: inline-block;
+      color: darken($brand-grey, 20%);
+      padding: .5em;
+    }
+  }
+}

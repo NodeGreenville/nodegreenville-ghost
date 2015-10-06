@@ -4,13 +4,25 @@
   "description": "A website for NodeGreenville",
   "main": "server.js",
   "dependencies": {
-    "ghost": "^0.7.1"
+    "ghost": "^0.7.1",
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browser-sync": "^2.9.8",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.6",
     "mocha": "^2.3.3",
-    "supertest": "^1.1.0"
+    "normalize-scss": "appleboy/normalize.scss",
+    "supertest": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
   },
   "scripts": {
+    "dev": "gulp",
     "test": "mocha test/"
   },
   "repository": {

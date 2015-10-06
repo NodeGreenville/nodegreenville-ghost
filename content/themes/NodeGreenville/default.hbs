@@ -15,25 +15,35 @@
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+    {{#if post}}
+        <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+    {{/if}}
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}} nav-closed">
 
-    {{navigation}}
-
     <div class="site-wrapper">
+        {{navigation}}
 
         {{! Everything else gets inserted here }}
         {{{body}}}
 
         <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+            <section class="copyright">
+                <span>&copy; {{date format="YYYY"}}</span>
+                <a href="{{@blog.url}}">{{@blog.title}}</a> All rights reserved.
+            </section>
+            <section class="links">
+                <ul>
+                    <li><a href="//twitter.com/nodegreenville">Twitter</a></li>
+                    <li><a href="//githumb.com/nodegreenville">Github</a></li>
+                    <li><a href="//meetup.com/nodegreenville">Meetup dot com</a></li>
+                </ul>
+            </section>
         </footer>
 
     </div>
@@ -41,11 +51,11 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    {{! The main JavaScript file for NodeGreenville }}
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script> 
-    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 
+    {{! The main JavaScript file for NodeGreenville }}
+    <script type="text/javascript" src="{{asset "js/bundle.js"}}"></script>
+    {{#if post}}
+        <script src="{{asset "js/prism.js"}}"></script>
+    {{/if}}
 </body>
 </html>
