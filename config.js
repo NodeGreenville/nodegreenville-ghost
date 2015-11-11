@@ -51,10 +51,18 @@ config = {
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {
-            client: 'sqlite3',
+            client: 'pg',
+            // connection: {
+            //     filename: path.join(__dirname, '/content/data/ghost-dev.db')
+            // },
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
+              host : '162.243.72.144',
+              port : '5432',
+              user : 'nodegreenville',
+              password : 'Node.js is fun',
+              database : 'nodegreenville',
+              charset : 'utf8'
+            }
             debug: false
         },
         // #### Server
