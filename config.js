@@ -62,7 +62,7 @@ config = {
               password : 'Node.js is fun',
               database : 'nodegreenville',
               charset : 'utf8'
-            },
+            }
             debug: false
         },
         // #### Server
