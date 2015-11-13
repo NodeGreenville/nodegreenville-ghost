@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/NodeGreenville/nodegreenville-ghost.png?label=ready&title=Ready)](https://waffle.io/NodeGreenville/nodegreenville-ghost)
 # nodegreenville-ghost
 
 ## Development workflow
